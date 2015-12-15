@@ -25,6 +25,6 @@ namespace JustGoApp.Pages
         public SignIn()
         {
             this.InitializeComponent();
-        }
+        } 
     }
 }
