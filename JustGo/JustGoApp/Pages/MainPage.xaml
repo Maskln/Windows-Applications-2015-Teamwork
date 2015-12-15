@@ -16,7 +16,7 @@
             <ColumnDefinition />
             <ColumnDefinition /> 
         </Grid.ColumnDefinitions>
-        <Image Grid.Row="0" Grid.ColumnSpan="2" Source="https://s-media-cache-ak0.pinimg.com/736x/ed/13/fb/ed13fbe7608674b6fe70909697f91d08.jpg" />
+        <Image Grid.Row="0" Grid.ColumnSpan="2" Source="/Assets/image/2012_Go_GO_signature_420.png" />
         <Button Background="#07613e" Foreground="AntiqueWhite" Grid.Row="1" Grid.Column="0" Content="GO" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="OnGoButtonClick" />
         <Button Background="#07613e" Foreground="AntiqueWhite" Grid.Row="1" Grid.Column="1" Content="Register GO" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="OnRegisterGoButtonClick"/>
 
