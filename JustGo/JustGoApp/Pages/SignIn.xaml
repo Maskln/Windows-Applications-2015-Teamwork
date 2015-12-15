@@ -22,7 +22,7 @@
                    VerticalAlignment="Center" />
         <TextBox Grid.Row="1" 
                  Width="300" 
-                 PlaceholderText="Please Enter Username" 
+                 PlaceholderText="Please Enter Email" 
                  BorderBrush="#07613e"   
                  BorderThickness="0, 0, 0, 1"
                  HorizontalAlignment="Center" 
