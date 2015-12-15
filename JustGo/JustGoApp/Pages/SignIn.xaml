@@ -9,15 +9,30 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height="1.2*" />
             <RowDefinition Height="0.9*"/>
             <RowDefinition Height="0.9*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="1.1*"/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="0.6*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="Sign In" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        <TextBox Grid.Row="1" Width="300" PlaceholderText="Please Enter Username" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        <PasswordBox  Grid.Row="2" Width="300" PlaceholderText="Please Enter Password" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        <Button Grid.Row="4" Content="Sign In" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <TextBlock Grid.Row="0"
+                   Text="Sign In" 
+                   FontSize="36"                  
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" />
+        <TextBox Grid.Row="1" 
+                 Width="300" 
+                 PlaceholderText="Please Enter Username" 
+                 BorderBrush="#07613e"   
+                 BorderThickness="0, 0, 0, 1"
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Center" />
+        <PasswordBox  Grid.Row="2" Width="300" 
+                      PlaceholderText="Please Enter Password"
+                      BorderBrush="#07613e"   
+                      BorderThickness="0, 0, 0, 1"                       
+                      HorizontalAlignment="Center" 
+                      VerticalAlignment="Center" />
+        <Button  Background="#07613e" Foreground="AntiqueWhite" Grid.Row="4" Content="Sign In" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
     </Grid>
 </Page>
