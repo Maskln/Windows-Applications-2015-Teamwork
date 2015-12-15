@@ -16,23 +16,28 @@
             <RowDefinition Height="0.6*"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0"
+                   Grid.Column="0"
                    Text="Sign In" 
                    FontSize="36"                  
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center" />
-        <TextBox Grid.Row="1" 
+        <TextBox Grid.Row="1"
+                 Grid.Column="0"                  
                  Width="300" 
                  PlaceholderText="Please Enter Email" 
                  BorderBrush="#07613e"   
                  BorderThickness="0, 0, 0, 1"
                  HorizontalAlignment="Center" 
                  VerticalAlignment="Center" />
-        <PasswordBox  Grid.Row="2" Width="300" 
+        <PasswordBox  Grid.Row="2"
+                      Grid.Column="0"                       
+                      Width="300" 
                       PlaceholderText="Please Enter Password"
                       BorderBrush="#07613e"   
                       BorderThickness="0, 0, 0, 1"                       
                       HorizontalAlignment="Center" 
                       VerticalAlignment="Center" />
-        <Button  Background="#07613e" Foreground="AntiqueWhite" Grid.Row="4" Content="Sign In" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <Button  Grid.Row="4"
+                 Content="Sign In" />
     </Grid>
 </Page>

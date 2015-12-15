@@ -18,18 +18,22 @@
             <RowDefinition Height="0.6*"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0"
+                   Grid.Column="0"
                    Text="Sign Up" 
                    FontSize="36"                  
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center" />
         <TextBox Grid.Row="1" 
+                 Grid.Column="0"
                  Width="300" 
                  PlaceholderText="Please Enter Email" 
                  BorderBrush="#07613e"   
                  BorderThickness="0, 0, 0, 1"
                  HorizontalAlignment="Center" 
                  VerticalAlignment="Center" />
-        <PasswordBox  Grid.Row="2" Width="300" 
+        <PasswordBox  Grid.Row="2"
+                      Grid.Column="0"
+                      Width="300" 
                       PlaceholderText="Please Enter Password"
                       BorderBrush="#07613e"   
                       BorderThickness="0, 0, 0, 1"                       
@@ -41,16 +45,16 @@
                       BorderThickness="0, 0, 0, 1"                       
                       HorizontalAlignment="Center" 
                       VerticalAlignment="Center" />
-        <TextBox  Grid.Row="4" Width="300" 
-                      PlaceholderText="Please Enter Phone Number"
-                      BorderBrush="#07613e"   
-                      BorderThickness="0, 0, 0, 1"                       
-                      HorizontalAlignment="Center" 
-                      VerticalAlignment="Center" />           
-        <Button Grid.Row="6" Content="Sign Up"
-                Background="#07613e"
-                Foreground="AntiqueWhite"
-                HorizontalAlignment="Stretch"
-                VerticalAlignment="Stretch" />
+        <TextBox  Grid.Row="4" 
+                  Grid.Column="0"                   
+                  Width="300" 
+                  PlaceholderText="Please Enter Phone Number"
+                  BorderBrush="#07613e"   
+                  BorderThickness="0, 0, 0, 1"                       
+                  HorizontalAlignment="Center" 
+                  VerticalAlignment="Center" />
+        <Button Grid.Row="6"
+                Grid.Column="0"
+                Content="Sign Up" />
     </Grid>
 </Page>

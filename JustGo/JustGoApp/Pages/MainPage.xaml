@@ -14,11 +14,18 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
-            <ColumnDefinition /> 
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Image Grid.Row="0" Grid.ColumnSpan="2" Source="/Assets/image/2012_Go_GO_signature_420.png" />
-        <Button Background="#07613e" Foreground="AntiqueWhite" Grid.Row="1" Grid.Column="0" Content="GO" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="OnGoButtonClick" />
-        <Button Background="#07613e" Foreground="AntiqueWhite" Grid.Row="1" Grid.Column="1" Content="Register GO" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="OnRegisterGoButtonClick"/>
-
+        <Image Grid.Row="0" 
+               Grid.ColumnSpan="2"
+               Source="/Assets/image/2012_Go_GO_signature_420.png" />
+        <Button Grid.Row="1" 
+                Grid.Column="0"
+                Content="GO"                
+                Click="OnGoButtonClick" />
+        <Button Grid.Row="1"
+                Grid.Column="1"
+                Content="Register GO"                              
+                Click="OnRegisterGoButtonClick"/>
     </Grid>
 </Page>
