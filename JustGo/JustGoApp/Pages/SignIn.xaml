@@ -18,9 +18,7 @@
         <TextBlock Grid.Row="0"
                    Grid.Column="0"
                    Text="Sign In" 
-                   FontSize="36"                  
-                   HorizontalAlignment="Center" 
-                   VerticalAlignment="Center" />
+                   Style="{StaticResource titleTextBlockStyle}" />
         <TextBox Grid.Row="1"
                  Grid.Column="0"                  
                  Width="300" 
@@ -29,15 +27,15 @@
                  BorderThickness="0, 0, 0, 1"
                  HorizontalAlignment="Center" 
                  VerticalAlignment="Center" />
-        <PasswordBox  Grid.Row="2"
-                      Grid.Column="0"                       
-                      Width="300" 
-                      PlaceholderText="Please Enter Password"
-                      BorderBrush="#07613e"   
-                      BorderThickness="0, 0, 0, 1"                       
-                      HorizontalAlignment="Center" 
-                      VerticalAlignment="Center" />
-        <Button  Grid.Row="4"
-                 Content="Sign In" />
+        <PasswordBox Grid.Row="2"
+                     Grid.Column="0"                       
+                     Width="300" 
+                     PlaceholderText="Please Enter Password"
+                     BorderBrush="#07613e"   
+                     BorderThickness="0, 0, 0, 1"                       
+                     HorizontalAlignment="Center" 
+                     VerticalAlignment="Center" />
+        <Button Grid.Row="4"
+                Content="Sign In" />
     </Grid>
 </Page>
