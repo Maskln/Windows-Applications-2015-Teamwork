@@ -9,6 +9,27 @@
         <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="VerticalAlignment" Value="Stretch" />   
     </Style>
+    <Style x:Key="ProfileButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="#07613e" />
+        <Setter Property="Foreground" Value="AntiqueWhite" />
+        <Setter Property="Width" Value="50" />  
+        <Setter Property="Height" Value="50" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Content" Value="+" />
+        <Setter Property="FontSize" Value="33" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Template" Value="{StaticResource CircleButtonTemplate}" />
+
+    </Style>
+    <ControlTemplate x:Key="CircleButtonTemplate" TargetType="Button">
+        <Grid>
+            <Ellipse Width="{TemplateBinding Width}"
+                             Height="{TemplateBinding Height}"
+                             Fill="{TemplateBinding Background}" />
+            <ContentPresenter HorizontalAlignment="Center" />
+        </Grid>
+    </ControlTemplate>
     <Style TargetType="Button" 
            BasedOn="{StaticResource defaultButtonStyle}">          
     </Style>

@@ -13,28 +13,28 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace JustGoApp
+namespace JustGoApp.Pages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class SignedInPage : Page
     {
-        public MainPage()
+        public SignedInPage()
         {
             this.InitializeComponent();
         }
 
-        private void OnGoButtonClick(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.SignedInPage));
-        }
-
-        private void OnRegisterGoButtonClick(object sender, RoutedEventArgs e)
+        private void OnClickPlusButton(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Pages.SignUp));
+        }
+
+        private void OnProfileButton(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.ProfilePage));  
         }
     }
 }
