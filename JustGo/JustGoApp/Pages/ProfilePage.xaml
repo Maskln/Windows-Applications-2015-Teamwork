@@ -1,0 +1,98 @@
+﻿<Page
+    x:Class="JustGoApp.Pages.ProfilePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JustGoApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.2*" />
+            <RowDefinition Height="0.7*" />
+            <RowDefinition Height="0.9*" />
+            <RowDefinition Height="0.9*" />
+            <RowDefinition Height="0.9*" />
+            <RowDefinition Height="0.9*" />
+            <RowDefinition Height="0.6*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0"
+               Grid.Column="0"
+               Text="Profile" 
+               Style="{StaticResource titleTextBlockStyle}" />
+        <Image Grid.Row="1" 
+           Grid.Column="0"
+           Source="/Assets/image/2012_Go_GO_signature_420.png" />
+        <StackPanel Grid.Row="2" 
+                Grid.Column="0"
+                BorderThickness="0, 0, 0, 1"
+                BorderBrush="#07613e"
+                Width="300"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+            <TextBlock Text="First Name:"
+                   FontSize="10"
+                   Foreground="Gray"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"/>
+            <TextBlock Text="Lyubomir"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" 
+                Grid.Column="0"
+                BorderThickness="0, 0, 0, 1"
+                BorderBrush="#07613e"
+                Width="300"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+            <TextBlock Text="Last Name:"
+                   FontSize="10"
+                   Foreground="Gray"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"/>
+            <TextBlock Text="Nanev"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" 
+                Grid.Column="0"
+                BorderThickness="0, 0, 0, 1"
+                BorderBrush="#07613e"
+                Width="300"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+            <TextBlock Text="E-mail:"
+                   FontSize="10"
+                   Foreground="Gray"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"/>
+            <TextBlock Text="Lyubomir.Nanev@gmail.com"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5" 
+                Grid.Column="0"
+                BorderThickness="0, 0, 0, 1"
+                BorderBrush="#07613e"
+                Width="300"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+            <TextBlock Text="Phone Number:"
+                   FontSize="10"
+                   Foreground="Gray"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"/>
+            <TextBlock Text="+359885134556"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+        </StackPanel>
+        <Button Grid.Row="6"
+                Grid.Column="0"
+                Content="Edit" />
+        <Button Grid.Row="7"
+                Grid.Column="0"
+                Content="Edit" />
+    </Grid>
+</Page>
