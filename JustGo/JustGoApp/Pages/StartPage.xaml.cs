@@ -29,7 +29,7 @@ namespace JustGoApp
 
         private void OnGoButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Pages.SignIn));
+            this.Frame.Navigate(typeof(Pages.ProfilePage));
         }
 
         private void OnRegisterGoButtonClick(object sender, RoutedEventArgs e)

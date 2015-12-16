@@ -26,11 +26,7 @@
            Source="/Assets/image/2012_Go_GO_signature_420.png" />
         <StackPanel Grid.Row="2" 
                 Grid.Column="0"
-                BorderThickness="0, 0, 0, 1"
-                BorderBrush="#07613e"
-                Width="300"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center">
+                Style="{StaticResource ProfilePageStackPanelStyle}">
             <TextBlock Text="First Name:"
                    FontSize="10"
                    Foreground="Gray"
@@ -42,11 +38,7 @@
         </StackPanel>
         <StackPanel Grid.Row="3" 
                 Grid.Column="0"
-                BorderThickness="0, 0, 0, 1"
-                BorderBrush="#07613e"
-                Width="300"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center">
+                Style="{StaticResource ProfilePageStackPanelStyle}">
             <TextBlock Text="Last Name:"
                    FontSize="10"
                    Foreground="Gray"
@@ -58,11 +50,7 @@
         </StackPanel>
         <StackPanel Grid.Row="4" 
                 Grid.Column="0"
-                BorderThickness="0, 0, 0, 1"
-                BorderBrush="#07613e"
-                Width="300"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center">
+                Style="{StaticResource ProfilePageStackPanelStyle}">
             <TextBlock Text="E-mail:"
                    FontSize="10"
                    Foreground="Gray"
@@ -74,11 +62,7 @@
         </StackPanel>
         <StackPanel Grid.Row="5" 
                 Grid.Column="0"
-                BorderThickness="0, 0, 0, 1"
-                BorderBrush="#07613e"
-                Width="300"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center">
+                Style="{StaticResource ProfilePageStackPanelStyle}">
             <TextBlock Text="Phone Number:"
                    FontSize="10"
                    Foreground="Gray"
@@ -89,9 +73,6 @@
                   VerticalAlignment="Center"/>
         </StackPanel>
         <Button Grid.Row="6"
-                Grid.Column="0"
-                Content="Edit" />
-        <Button Grid.Row="7"
                 Grid.Column="0"
                 Content="Edit" />
     </Grid>
