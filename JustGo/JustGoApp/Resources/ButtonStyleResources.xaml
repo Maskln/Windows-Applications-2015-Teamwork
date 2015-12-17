@@ -20,7 +20,6 @@
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="Template" Value="{StaticResource CircleButtonTemplate}" />
-
     </Style>
     <ControlTemplate x:Key="CircleButtonTemplate" TargetType="Button">
         <Grid>
