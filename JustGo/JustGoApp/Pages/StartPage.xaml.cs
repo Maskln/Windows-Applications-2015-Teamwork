@@ -29,6 +29,7 @@ namespace JustGoApp
 
         private void OnGoButtonClick(object sender, RoutedEventArgs e)
         {
+            // TODO: If the User is loggedIn => Navigate to SignedInPage/SignInPage
             this.Frame.Navigate(typeof(Pages.SignIn));
         }
 

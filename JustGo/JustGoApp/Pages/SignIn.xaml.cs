@@ -20,17 +20,24 @@
 
         private async void OnSignInButtonClick(object sender, RoutedEventArgs e)
         {
-            var formContent = new FormUrlEncodedContent(new[]
-        {
-            new KeyValuePair<string, string>("Username", signInUsername.Text), 
-            new KeyValuePair<string, string>("Password", signInPassword.Password),
-            new KeyValuePair<string, string>("grant_type", "password"),
+            var formContent = new FormUrlEncodedContent(new[] { new KeyValuePair<string, string>("Username", signInUsername.Text),
+                                                                new KeyValuePair<string, string>("Password", signInPassword.Password),
+                                                                new KeyValuePair<string, string>("grant_type", "password")});  
 
-
-        });     
             var response = await httpClient.PostAsync("http://localhost:15334/token", formContent);
-            var stringContent = await response.Content.ReadAsStringAsync();   
-        
+
+            // TODO: Parse the Token by stringContent
+            var stringContent = await response.Content.ReadAsStringAsync();
+
+            if (response.IsSuccessStatusCode)
+            {
+                this.Frame.Navigate(typeof(Pages.SignedInPage));
+            }
+            else
+            {
+                // TODO: Username or password are uncorrect!!!
+            }
+           
+        }
     }
-}
 }
