@@ -23,8 +23,8 @@
 
         [ValidateTake]
         public IHttpActionResult Get(
-            int skip = RealEstateConstants.DefaultRealEstateSkip,
-            int take = RealEstateConstants.DefaultRealEstateTake)
+            int skip = EventConstants.DefaultRealEstateSkip,
+            int take = EventConstants.DefaultRealEstateTake)
         {
             var result = this.realEstates
                 .GetAll(skip, take)
@@ -34,29 +34,29 @@
             return this.Ok(result);
         }
 
-        public IHttpActionResult Get(int id)
-        {
-            var query = this.realEstates.GetById(id);
-            RealEstateDetailsResponseModel result;
-            if (this.User.Identity.IsAuthenticated)
-            {
-                result = query
-                    .ProjectTo<AuthenticatedRealEstateDetailsResponseModel>()
-                    .FirstOrDefault();
-            }
-            else
-            {
-                result = query
-                    .ProjectTo<RealEstateDetailsResponseModel>()
-                    .FirstOrDefault();
-            }
+        //public IHttpActionResult Get(int id)
+        //{
+        //    var query = this.realEstates.GetById(id);
+        //    RealEstateDetailsResponseModel result;
+        //    if (this.User.Identity.IsAuthenticated)
+        //    {
+        //        result = query
+        //            .ProjectTo<AuthenticatedRealEstateDetailsResponseModel>()
+        //            .FirstOrDefault();
+        //    }
+        //    else
+        //    {
+        //        result = query
+        //            .ProjectTo<RealEstateDetailsResponseModel>()
+        //            .FirstOrDefault();
+        //    }
 
-            return this.Ok(result);
-        }
+        //    return this.Ok(result);
+        //}
 
         [Authorize]
         [ValidateModel]
-        public IHttpActionResult Post(RealEstateRequestModel model)
+        public IHttpActionResult Post(EventResponseModel model)
         {
             var newRealEstate = Mapper.Map<Events>(model);
             var id = this.realEstates.AddNew(newRealEstate, this.User.Identity.GetUserId());

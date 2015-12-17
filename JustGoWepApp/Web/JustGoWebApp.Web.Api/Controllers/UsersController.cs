@@ -30,20 +30,20 @@
             return this.Ok(result);
         }
 
-        [Authorize]
-        [HttpPut]
-        [Route("api/Users/Rate")]
-        [ValidateModel]
-        public IHttpActionResult Rate(RatingRequestModel model)
-        {
-            if (this.User.Identity.GetUserId() == model.UserId)
-            {
-                return this.BadRequest("You cannot give rating to yourself!");
-            }
+        //[Authorize]
+        //[HttpPut]
+        //[Route("api/Users/Rate")]
+        //[ValidateModel]
+        //public IHttpActionResult Rate(RatingRequestModel model)
+        //{
+        //    if (this.User.Identity.GetUserId() == model.UserId)
+        //    {
+        //        return this.BadRequest("You cannot give rating to yourself!");
+        //    }
 
-            var rating = Mapper.Map<Rating>(model);
-            this.users.Rate(rating);
-            return this.Ok();
-        }
+        //    var rating = Mapper.Map<Rating>(model);
+        //    this.users.Rate(rating);
+        //    return this.Ok();
+        //}
     }
 }

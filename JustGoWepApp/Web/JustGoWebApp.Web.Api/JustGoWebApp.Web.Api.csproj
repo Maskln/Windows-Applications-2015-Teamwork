@@ -236,11 +236,11 @@
     <Compile Include="Models\Account\UserInfoViewModel.cs" />
     <Compile Include="Models\Comments\CommentRequestModel.cs" />
     <Compile Include="Models\Comments\CommentResponseModel.cs" />
-    <Compile Include="Models\RealEstates\AuthenticatedRealEstateDetailsResponseModel.cs" />
-    <Compile Include="Models\RealEstates\ListedRealEstateResponseModel.cs" />
-    <Compile Include="Models\RealEstates\RealEstateDetailsResponseModel.cs" />
-    <Compile Include="Models\RealEstates\RealEstateRequestModel.cs" />
-    <Compile Include="Models\Users\RatingRequestModel.cs" />
+    <Compile Include="Models\Events\AuthenticatedRealEstateDetailsResponseModel.cs" />
+    <Compile Include="Models\Events\ListedRealEstateResponseModel.cs" />
+    <Compile Include="Models\Events\RealEstateDetailsResponseModel.cs" />
+    <Compile Include="Models\Events\EventRequestModel.cs" />
+    <Compile Include="Models\Users\DataForUserResponseModel.cs" />
     <Compile Include="Models\Users\UserResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Infrastructure\Providers\ApplicationOAuthProvider.cs" />
@@ -264,15 +264,11 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\JustGoWebApp.Data.Models\JustGoWebApp.Data.Models.csproj">
       <Project>{c876458d-0358-44fd-a1cc-be14ac77cf6a}</Project>
-      <Name>Teleimot.Data.Models</Name>
+      <Name>JustGoWebApp.Data.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Data\JustGoWebApp.Data\JustGoWebApp.Data.csproj">
       <Project>{a345f710-0a0a-4c08-b209-bd981a49c932}</Project>
       <Name>JustGoWebApp.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Data\Teleimot.Data\Teleimot.Data.csproj">
-      <Project>{6defbec3-46c4-4b30-bd6d-f7667022673b}</Project>
-      <Name>Teleimot.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\JustGoWebApp.Common\JustGoWebApp.Common.csproj">
       <Project>{4160a10e-0c3d-4290-9863-45b0c403f0d4}</Project>
@@ -281,10 +277,6 @@
     <ProjectReference Include="..\..\Services\JustGoWebApp.Services.Data\JustGoWebApp.Services.Data.csproj">
       <Project>{93c4fea4-7dd7-4c4a-bfe0-7bcae55cfc24}</Project>
       <Name>JustGoWebApp.Services.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Services\Teleimot.Services.Data\Teleimot.Services.Data.csproj">
-      <Project>{9b9447d8-7e82-4094-867d-5a7bd262cbb5}</Project>
-      <Name>Teleimot.Services.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

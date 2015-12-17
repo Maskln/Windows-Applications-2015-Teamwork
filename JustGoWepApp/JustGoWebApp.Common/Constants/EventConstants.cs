@@ -1,6 +1,6 @@
 ﻿namespace JustGoWebApp.Common.Constants
 {
-    public class RealEstateConstants
+    public class EventConstants
     {
         public const int DefaultRealEstateTake = 10;
         public const int DefaultRealEstateSkip = 0;

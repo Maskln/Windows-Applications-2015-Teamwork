@@ -1,41 +1,40 @@
 ﻿namespace JustGoWebApp.Data.Models
 {
+    using Common.Constants;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Security.Claims;
     using System.Threading.Tasks;
 
     public class User : IdentityUser
     {
-        private ICollection<Events> realEstates;
-        private ICollection<Comment> comments;
-        private ICollection<Rating> ratings;
+        private ICollection<Events> eventsUser;
+        
 
         public User()
         {
-            this.realEstates = new HashSet<Events>();
-            this.comments = new HashSet<Comment>();
-            this.ratings = new HashSet<Rating>();
+            this.eventsUser = new HashSet<Events>();
         }
         
-        public virtual ICollection<Events> RealEstates
+        public virtual ICollection<Events> EventsUser
         {
-            get { return this.realEstates; }
-            set { this.realEstates = value; }
+            get { return this.eventsUser; }
+            set { this.eventsUser = value; }
         }
 
-        public virtual ICollection<Comment> Comments
-        {
-            get { return this.comments; }
-            set { this.comments = value; }
-        }
+        
+        [MinLength(UserConstants.NameMinLength)]
+        [MaxLength(UserConstants.NameMaxLength)]
+        public string FirstName { get; set; }
 
-        public virtual ICollection<Rating> Ratings
-        {
-            get { return this.ratings; }
-            set { this.ratings = value; }
-        }
+        [MinLength(UserConstants.NameMinLength)]
+        [MaxLength(UserConstants.NameMaxLength)]
+        public string LastName { get; set; }
+
+        [MinLength(UserConstants.TelephonMinLength)]
+        public string TelefonNumber { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager, string authenticationType)
         {

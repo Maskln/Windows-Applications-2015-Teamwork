@@ -6,7 +6,7 @@ using Ninject.Web.Common.OwinHost;
 using Ninject.Web.WebApi.OwinHost;
 using JustGoWebApp.Common.Constants;
 
-[assembly: OwinStartup(typeof(JustGoWebApp.Web.Api.Startup))]
+//[assembly: OwinStartup(typeof(JustGoWebApp.Web.Api.Startup))]
 
 namespace JustGoWebApp.Web.Api
 {

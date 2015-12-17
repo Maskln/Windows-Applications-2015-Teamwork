@@ -41,10 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\Assemblies.cs" />
-    <Compile Include="Constants\CommentConstants.cs" />
     <Compile Include="Constants\UserConstants.cs" />
     <Compile Include="Constants\WebConstants.cs" />
-    <Compile Include="Constants\RealEstateConstants.cs" />
+    <Compile Include="Constants\EventConstants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
