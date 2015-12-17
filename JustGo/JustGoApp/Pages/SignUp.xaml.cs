@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -42,7 +43,9 @@ namespace JustGoApp.Pages
             var response = await httpClient.PostAsync(url, formContent);
             var stringContent = await response.Content.ReadAsStringAsync();
 
-
+            var status = JsonConvert
+               .SerializeObject(response);
+            
         }
     }
 }
