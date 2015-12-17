@@ -21,20 +21,25 @@
                    Grid.Column="0"
                    Text="Sign Up" 
                    Style="{StaticResource titleTextBlockStyle}" />
-        <TextBox Grid.Row="1" 
+        <TextBox Name="userNameSignUp"
+                 Grid.Row="1" 
                  Grid.Column="0"
                  PlaceholderText="Please Enter Email"  />
-        <PasswordBox Grid.Row="2"
+        <PasswordBox Name="passwordSignUp"
+                     Grid.Row="2"
                      Grid.Column="0"
                      PlaceholderText="Please Enter Password" />
-        <PasswordBox Grid.Row="3"
+        <PasswordBox Name="passwordConfirmSignUp"
+                     Grid.Row="3"
                      Grid.Column="0"
                      PlaceholderText="Please Confirm Password"/>
-        <TextBox Grid.Row="4" 
+        <TextBox Name="telephoneSignUp"
+                 Grid.Row="4" 
                  Grid.Column="0"  
                  PlaceholderText="Please Enter Phone Number" />
         <Button Grid.Row="6"
                 Grid.Column="0"
-                Content="Sign Up" />
+                Content="Sign Up"
+                Click="OnRegisterUserButtonClick"/>
     </Grid>
 </Page>
