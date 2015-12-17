@@ -31,13 +31,12 @@ namespace JustGoApp.Pages
         }
         private async void OnRegisterUserButtonClick(object sender, RoutedEventArgs e)
         {
-            var formContent = new FormUrlEncodedContent(new[]
-{
-    new KeyValuePair<string, string>("Username", userNameSignUp.Text),
-    new KeyValuePair<string, string>("Email", userNameSignUp.Text),
-    new KeyValuePair<string, string>("Password", passwordSignUp.Password),
-    new KeyValuePair<string, string>("ConfirmPassword", passwordConfirmSignUp.Password)
-});
+            var formContent = new FormUrlEncodedContent(new[] {
+                                                                  new KeyValuePair<string, string>("Username", userNameSignUp.Text),
+                                                                  new KeyValuePair<string, string>("Email", userNameSignUp.Text),
+                                                                  new KeyValuePair<string, string>("Password", passwordSignUp.Password),
+                                                                  new KeyValuePair<string, string>("ConfirmPassword", passwordConfirmSignUp.Password)
+                                                              });
 
             var url = "http://localhost:15334/api/Account/Register";
             var response = await httpClient.PostAsync(url, formContent);

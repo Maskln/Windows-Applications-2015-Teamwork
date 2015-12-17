@@ -19,23 +19,16 @@
                    Grid.Column="0"
                    Text="Sign In" 
                    Style="{StaticResource titleTextBlockStyle}" />
-        <TextBox Grid.Row="1"
-                 Grid.Column="0"                  
-                 Width="300" 
-                 PlaceholderText="Please Enter Email" 
-                 BorderBrush="#07613e"   
-                 BorderThickness="0, 0, 0, 1"
-                 HorizontalAlignment="Center" 
-                 VerticalAlignment="Center" />
-        <PasswordBox Grid.Row="2"
-                     Grid.Column="0"                       
-                     Width="300" 
-                     PlaceholderText="Please Enter Password"
-                     BorderBrush="#07613e"   
-                     BorderThickness="0, 0, 0, 1"                       
-                     HorizontalAlignment="Center" 
-                     VerticalAlignment="Center" />
+        <TextBox Name="signInUsername"
+                 Grid.Row="1"
+                 Grid.Column="0" 
+                 PlaceholderText="Please Enter Email" />
+        <PasswordBox Name="signInPassword"
+                     Grid.Row="2"
+                     Grid.Column="0" 
+                     PlaceholderText="Please Enter Password" />
         <Button Grid.Row="4"
-                Content="Sign In" />
+                Content="Sign In"
+                Click="OnSignInButtonClick"/>
     </Grid>
 </Page>
