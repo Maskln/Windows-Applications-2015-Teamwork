@@ -47,7 +47,7 @@ namespace JustGoApp.Pages
             var status = JsonConvert
                .SerializeObject(response);
             JObject obj = JObject.Parse(status);
-            string name = (string)obj["StatusCode"];
+            string name = (string)obj["ModelState"];
         }
     }
 }
