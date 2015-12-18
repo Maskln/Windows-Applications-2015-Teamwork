@@ -22,7 +22,7 @@
                Text="Edit Profile" 
                Style="{StaticResource titleTextBlockStyle}" />
         <Grid Grid.Row="1" 
-                Grid.Column="0">
+              Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="1*" />
@@ -34,15 +34,19 @@
             <Image Grid.Row="0" 
                    Grid.Column="0"
                    Grid.RowSpan="2"
-                   Source="/Assets/image/2012_Go_GO_signature_420.png"
+                   Source="/Assets/image/JustGoLogo.png"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"/>
             <Button Grid.Row="0"
                     Grid.Column="1"
-                    Content="Capture By Camera"/>
+                    Content="Capture By Camera"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" />
             <Button Grid.Row="1"
                     Grid.Column="1"
-                    Content="Choose By Gallery"/>
+                    Content="Choose By Gallery"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" />
         </Grid>
         <StackPanel Grid.Row="2" 
                 Grid.Column="0"

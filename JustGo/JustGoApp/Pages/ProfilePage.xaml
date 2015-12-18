@@ -23,7 +23,7 @@
                Style="{StaticResource titleTextBlockStyle}" />
         <Image Grid.Row="1" 
            Grid.Column="0"
-           Source="/Assets/image/2012_Go_GO_signature_420.png" />
+           Source="/Assets/image/JustGoLogo.png" />
         <StackPanel Grid.Row="2" 
                 Grid.Column="0"
                 Style="{StaticResource ProfilePageStackPanelStyle}">

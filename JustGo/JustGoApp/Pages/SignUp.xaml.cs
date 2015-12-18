@@ -1,25 +1,13 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net.Http;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
-
-namespace JustGoApp.Pages
+﻿namespace JustGoApp.Pages
 {
+    using System.Collections.Generic;
+    using System.Net.Http;
+    using JustGoApp.Helpers;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Linq;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Controls;
+
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
@@ -33,21 +21,35 @@ namespace JustGoApp.Pages
         }
         private async void OnRegisterUserButtonClick(object sender, RoutedEventArgs e)
         {
+
             var formContent = new FormUrlEncodedContent(new[] {
                                                                   new KeyValuePair<string, string>("Username", userNameSignUp.Text),
                                                                   new KeyValuePair<string, string>("Email", userNameSignUp.Text),
                                                                   new KeyValuePair<string, string>("Password", passwordSignUp.Password),
-                                                                  new KeyValuePair<string, string>("ConfirmPassword", passwordConfirmSignUp.Password)
+                                                                  new KeyValuePair<string, string>("ConfirmPassword", passwordConfirmSignUp.Password),
+                                                                  new KeyValuePair<string, string>("TelefonNumber", telephoneSignUp.Text)
                                                               });
 
             var url = "http://localhost:15334/api/Account/Register";
             var response = await httpClient.PostAsync(url, formContent);
             var stringContent = await response.Content.ReadAsStringAsync();
 
-            var status = JsonConvert
-               .SerializeObject(response);
-            JObject obj = JObject.Parse(status);
-            string name = (string)obj["ModelState"];
+            
+            //JObject obj = JObject.Parse(stringContent);
+            //var name = obj["ModelState"];
+            //var mes = name.Children();
+            //var text = mes[0];
+
+            if (response.IsSuccessStatusCode)
+            {
+                HelperMethods.PopUpMessage("The Registration is successful", "Congrats", "Ok");
+            }
+            else
+            {
+               // string message = (string)obj[""];
+                HelperMethods.PopUpMessage("", "Sorry", "Try Again");
+
+            }
         }
     }
 }
