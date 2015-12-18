@@ -1,5 +1,7 @@
 ﻿namespace JustGoApp.Pages
 {
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Linq;
     using System.Collections.Generic;
     using System.Net.Http;
     using Windows.UI.Xaml;
@@ -26,8 +28,14 @@
 
             var response = await httpClient.PostAsync("http://localhost:15334/token", formContent);
 
-            // TODO: Parse the Token by stringContent
             var stringContent = await response.Content.ReadAsStringAsync();
+            
+
+            JObject obj = JObject.Parse(stringContent);
+            string name = (string)obj["access_token"];
+
+            // TODO: Parse the Token by stringContent
+           // var stringContent = await response.Content.ReadAsStringAsync();
 
             if (response.IsSuccessStatusCode)
             {

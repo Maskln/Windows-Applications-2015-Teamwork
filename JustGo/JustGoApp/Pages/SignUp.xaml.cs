@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -45,7 +46,8 @@ namespace JustGoApp.Pages
 
             var status = JsonConvert
                .SerializeObject(response);
-            
+            JObject obj = JObject.Parse(status);
+            string name = (string)obj["StatusCode"];
         }
     }
 }
