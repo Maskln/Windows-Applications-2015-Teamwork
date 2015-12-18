@@ -23,7 +23,7 @@
                 Click="OnClickPlusButton"/>
         <Image Grid.Row="1" 
                Grid.ColumnSpan="2"
-               Source="/Assets/image/2012_Go_GO_signature_420.png" />
+               Source="/Assets/image/JustGoLogo.png" />
         <Button Grid.Row="2" 
                 Grid.Column="0"
                 Content="Profile"
