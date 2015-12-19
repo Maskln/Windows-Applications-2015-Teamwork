@@ -31,6 +31,11 @@ namespace JustGoApp.DbContextSQLite
             return asyncConnection;
         }
 
+        internal static object GetUser()
+        {
+            throw new NotImplementedException();
+        }
+
         public static async void InitAsync()
         {
             var connection = GetDbConnectionAsync();

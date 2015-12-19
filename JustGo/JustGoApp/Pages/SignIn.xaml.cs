@@ -7,9 +7,9 @@
     using Windows.UI.Xaml.Controls;
     using System;
     using Helpers;
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+    using JustGoApp.DbContextSQLitee;    /// <summary>
+                              /// An empty page that can be used on its own or navigated to within a Frame.
+                              /// </summary>
     public sealed partial class SignIn : Page
     {
         private readonly HttpClient httpClient;
@@ -18,6 +18,7 @@
         {
             this.InitializeComponent();
             this.httpClient = new HttpClient();
+            DbContextSQL.InitAsync();
         }
 
         private async void OnSignInButtonClick(object sender, RoutedEventArgs e)
@@ -41,6 +42,13 @@
                 string message = "You are Signed in!";
                 var title = "Bravo :)";
                 var buuttonMessage = "Ok";
+
+               await DbContextSQL.InsertUserAsync(new User()
+                {
+                    UserName = signInUsername.Text,
+                    Token = token,
+
+                });
 
                 HelperMethods.PopUpMessage(message, title, buuttonMessage);
                 this.Frame.Navigate(typeof(Pages.SignedInPage));  

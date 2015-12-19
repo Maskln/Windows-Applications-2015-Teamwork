@@ -17,7 +17,7 @@ namespace JustGoApp.DbContextSQLitee
         
         public static SQLiteAsyncConnection GetDbConnectionAsync()
         {
-            var dbFilePath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+            var dbFilePath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "JustGoApp.sqlite");
 
             var connectionFactory =
                 new Func<SQLiteConnectionWithLock>(
@@ -49,17 +49,17 @@ namespace JustGoApp.DbContextSQLitee
             var connection = GetDbConnectionAsync();
             AsyncTableQuery<User> query = connection.Table<User>().Where(x => x.UserName.Contains(item.UserName));
             List<User> test = await query.ToListAsync();
-
-            //var result = await from User in connection.Table<User>()
-            //                   where User.UserName == item.UserName
-            //                   select ;
-
-            //         AsyncTableQuery<Article> query = conn.Table<Article>()
-            //.Where(x => x.Title.Contains(title));
-
-
-            //connection.Table<User>().Where(x => x.UserName == item.UserName);//FirstOrDefaultAsync(x => x.UserName == item.UserName);
             return test;
+        }
+
+        public static async Task<User> GetUser()
+        {
+            var connection = GetDbConnectionAsync();
+
+            AsyncTableQuery<User> query = connection.Table<User>();
+            var result = await query.FirstOrDefaultAsync(); //ToListAsync();
+
+            return result;
         }
     }
 }

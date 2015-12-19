@@ -26,7 +26,6 @@ namespace JustGoApp
         public StartPage()
         {
             this.InitializeComponent();
-           // DbContextSQL.InitAsync();
         }
 
         private void OnGoButtonClick(object sender, RoutedEventArgs e)
