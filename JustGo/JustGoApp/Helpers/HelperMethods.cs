@@ -20,6 +20,13 @@
             var user = (await DbContextSQL.GetUser());
             var tolken = user.Token;
             return tolken;
-        } 
+        }
+
+        public static async Task<string> GetUserName()
+        {
+            var user = (await DbContextSQL.GetUser());
+            var userName = user.UserName;
+            return userName;
+        }
     }
 }
