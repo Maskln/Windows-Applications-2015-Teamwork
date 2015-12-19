@@ -2,11 +2,11 @@
 {
     public class EventConstants
     {
-        public const int DefaultRealEstateTake = 10;
-        public const int DefaultRealEstateSkip = 0;
+        public const int DefaultEventsTake = 10;
+        public const int DefaultEventsSkip = 0;
 
-        public const int TitleMinLength = 5;
-        public const int TitleMaxLength = 50;
+        public const int TitleMinLength = 1;
+        public const int TitleMaxLength = 100;
 
         public const int DescriptionMinLength = 10;
         public const int DescriptionMaxLength = 1000;

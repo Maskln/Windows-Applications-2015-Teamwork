@@ -331,7 +331,7 @@ namespace JustGoWebApp.Web.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new User() { UserName = model.UserName, Email = model.Email, TelefonNumber = model.TelefonNumber };
+            var user = new User() { UserName = model.UserName, Email = model.Email, TelephoneNumber = model.TelephoneNumber };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 

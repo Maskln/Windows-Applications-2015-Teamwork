@@ -13,6 +13,7 @@
         [MaxLength(EventConstants.TitleMaxLength)]
         public string Title { get; set; }
 
+        // TODO: needs to be required? 
         [Required]
         [MinLength(EventConstants.DescriptionMinLength)]
         [MaxLength(EventConstants.DescriptionMaxLength)]
@@ -22,6 +23,9 @@
         public string Address { get; set; }
 
         public DateTime EventData { get; set; }
+
+        [Required]
+        public string Location { get; set; }
 
         //public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         //{

@@ -24,6 +24,7 @@
         [MaxLength(EventConstants.TitleMaxLength)]
         public string Title { get; set; }
 
+        //TODO: Required?
         [Required]
         [MinLength(EventConstants.DescriptionMinLength)]
         [MaxLength(EventConstants.DescriptionMaxLength)]
@@ -34,7 +35,10 @@
 
         public DateTime EventData { get; set; }
 
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedOn { get; set; } 
+
+        [Required]
+        public string Location { get; set; }
 
         public string UserId { get; set; }
 

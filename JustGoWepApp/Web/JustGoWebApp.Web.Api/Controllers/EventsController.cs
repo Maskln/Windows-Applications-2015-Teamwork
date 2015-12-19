@@ -23,8 +23,8 @@
 
         [ValidateTake]
         public IHttpActionResult Get(
-            int skip = EventConstants.DefaultRealEstateSkip,
-            int take = EventConstants.DefaultRealEstateTake)
+            int skip = EventConstants.DefaultEventsSkip,
+            int take = EventConstants.DefaultEventsTake)
         {
             var result = this.events
                 .GetAll(skip, take)

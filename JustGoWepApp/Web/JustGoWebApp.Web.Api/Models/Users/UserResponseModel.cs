@@ -6,6 +6,7 @@
     using Infrastructure.Mappings;
     using System.Collections.Generic;
     using RealEstates;
+
     public class UserResponseModel : IMapFrom<User>
     {
         public string UserName { get; set; }

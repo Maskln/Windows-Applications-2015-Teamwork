@@ -27,7 +27,7 @@
                                                                   new KeyValuePair<string, string>("Email", userNameSignUp.Text),
                                                                   new KeyValuePair<string, string>("Password", passwordSignUp.Password),
                                                                   new KeyValuePair<string, string>("ConfirmPassword", passwordConfirmSignUp.Password),
-                                                                  new KeyValuePair<string, string>("TelefonNumber", telephoneSignUp.Text)
+                                                                  new KeyValuePair<string, string>("TelephoneNumber", telephoneSignUp.Text)
                                                               });
 
             var url = "http://localhost:15334/api/Account/Register";
