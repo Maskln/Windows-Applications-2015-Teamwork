@@ -1,5 +1,7 @@
 ﻿namespace JustGoApp.Helpers
 {
+    using JustGoApp.DbContextSQLitee;
+    using System.Threading.Tasks;
     using Windows.UI.Popups;
 
     public static class HelperMethods
@@ -12,5 +14,13 @@
             messageBox.Commands.Add(new UICommand { Label = buttonMessage });
             messageBox.ShowAsync();
         }
+
+        public static async Task<string> GetToken()
+        {
+            var user = (await DbContextSQL.GetUser());
+            var tolken = user.Token;
+            return tolken;
+        }
+
     }
 }
