@@ -24,7 +24,7 @@
 
             var formContent = new FormUrlEncodedContent(new[] {
                                                                   new KeyValuePair<string, string>("Username", userNameSignUp.Text),
-                                                                  new KeyValuePair<string, string>("Email", userNameSignUp.Text),
+                                                                  new KeyValuePair<string, string>("Email", emailNameSignUp.Text),
                                                                   new KeyValuePair<string, string>("Password", passwordSignUp.Password),
                                                                   new KeyValuePair<string, string>("ConfirmPassword", passwordConfirmSignUp.Password),
                                                                   new KeyValuePair<string, string>("TelephoneNumber", telephoneSignUp.Text)
@@ -34,21 +34,18 @@
             var response = await httpClient.PostAsync(url, formContent);
             var stringContent = await response.Content.ReadAsStringAsync();
 
-            
+
             //JObject obj = JObject.Parse(stringContent);
             //var name = obj["ModelState"];
-            //var mes = name.Children();
-            //var text = mes[0];
 
             if (response.IsSuccessStatusCode)
             {
                 HelperMethods.PopUpMessage("The Registration is successful", "Congrats", "Ok");
+                this.Frame.Navigate(typeof(StartPage));
             }
             else
             {
-               // string message = (string)obj[""];
                 HelperMethods.PopUpMessage("", "Sorry", "Try Again");
-
             }
         }
     }
