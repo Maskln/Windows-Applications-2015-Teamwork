@@ -19,27 +19,60 @@
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0"
                    Grid.Column="0"
+                   Grid.ColumnSpan="2"
                    Text="Create Event" 
                    Style="{StaticResource titleTextBlockStyle}" />
-        <TextBox Name="titleEvent"
-                 Grid.Row="1" 
-                 Grid.Column="0"
-                 PlaceholderText="Please Enter Title"  />
-        <TextBox Name="addressEvent"
-                     Grid.Row="2"
-                     Grid.Column="0"
-                     PlaceholderText="Please Enter Locations" />
-        <TextBox Name="timeEvent"
-                     Grid.Row="3"
-                     Grid.Column="0"
-                     PlaceholderText="Please Enter Date and Time"/>
-        <RichEditBox Name="descriptionEvent"
-                 Grid.Row="4" 
-                 Grid.Column="0"  
-                 PlaceholderText="Please Enter Description" />
+        <StackPanel Grid.Row="1" 
+                    Grid.Column="0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Image VerticalAlignment="Center"
+                   Source="/Assets/image/titleIcon.jpg"
+                   Height="35"
+                   Width="35"/>
+            <TextBox Name="titleEvent"
+                     PlaceholderText="Please Enter Title"
+                     Style="{StaticResource defaultEventTextBoxStyle}" />
+        </StackPanel>
+        <StackPanel Grid.Row="2" 
+                    Grid.Column="0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Image VerticalAlignment="Center"
+                   Source="/Assets/image/locationIcon.jpg"
+                    Height="30"
+                   Width="30"/>
+            <TextBox Name="addressEvent"
+                     PlaceholderText="Please Enter Location"
+                     Style="{StaticResource defaultEventTextBoxStyle}" />
+        </StackPanel>
+        <StackPanel Grid.Row="3" 
+                    Grid.Column="0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Image VerticalAlignment="Center"
+                   Source="/Assets/image/clockIcon.jpg"
+                    Height="40"
+                   Width="40"/>
+            <TextBox Name="timeEvent"
+                     PlaceholderText="Please Enter Start of Event" 
+                     Style="{StaticResource defaultEventTextBoxStyle}" />
+        </StackPanel>
+        <StackPanel Grid.Row="4" 
+                    Grid.Column="0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Image VerticalAlignment="Center"
+                   Source="/Assets/image/balloonIcon.jpg"
+                    Height="50"
+                   Width="50"/>
+            <RichEditBox Name="descriptionEvent"
+                         PlaceholderText="Please Enter Description" 
+                         Style="{StaticResource  defaultEventRichEditBoxStyle}" />
+        </StackPanel>
         <Button Grid.Row="6"
                 Grid.Column="0"
-                Content="Sign Up"
-                />
+                Grid.ColumnSpan="2"
+                Content="Sign Up" />
     </Grid>
 </Page>
