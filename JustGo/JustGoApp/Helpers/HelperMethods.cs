@@ -20,7 +20,6 @@
             var user = (await DbContextSQL.GetUser());
             var tolken = user.Token;
             return tolken;
-        }
-
+        } 
     }
 }
