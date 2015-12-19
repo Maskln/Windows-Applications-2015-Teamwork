@@ -35,8 +35,8 @@
             var stringContent = await response.Content.ReadAsStringAsync();
 
 
-            //JObject obj = JObject.Parse(stringContent);
-            //var name = obj["ModelState"];
+            JObject obj = JObject.Parse(stringContent);
+            var name = obj["ModelState"];
 
             if (response.IsSuccessStatusCode)
             {
