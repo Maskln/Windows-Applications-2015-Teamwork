@@ -1,20 +1,21 @@
 ﻿namespace JustGoWebApp.Web.Api.Models.RealEstates
 {
+    using System;
     using Data.Models;
     using Infrastructure.Mappings;
-
-    public class ListedRealEstateResponseModel : IMapFrom<Events>
+  
+    public class ListedEventsResponseModel : IMapFrom<Events>
     {
         public int Id { get; set; }
 
         public string Title { get; set; }
-        
-        public decimal? SellingPrice { get; set; }
+                      
+        public string Description { get; set; }
 
-        public decimal? RentingPrice { get; set; }
+        public string Address{ get; set; }
 
-        public bool CanBeSold => this.SellingPrice.HasValue;
+        public DateTime EventData { get; set; }
 
-        public bool CanBeRented => this.RentingPrice.HasValue;
+        public DateTime CreatedOn { get; set; }
     }
 }

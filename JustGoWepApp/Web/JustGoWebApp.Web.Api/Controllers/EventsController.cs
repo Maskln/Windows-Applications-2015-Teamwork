@@ -12,13 +12,13 @@
     using Microsoft.AspNet.Identity;
     using Models.RealEstates;
 
-    public class RealEstatesController : ApiController
+    public class EventsController : ApiController
     {
-        private readonly IRealEstatesService realEstates;
+        private readonly IEventsService events;
 
-        public RealEstatesController(IRealEstatesService realEstates)
+        public EventsController(IEventsService events)
         {
-            this.realEstates = realEstates;
+            this.events = events;
         }
 
         [ValidateTake]
@@ -26,9 +26,9 @@
             int skip = EventConstants.DefaultRealEstateSkip,
             int take = EventConstants.DefaultRealEstateTake)
         {
-            var result = this.realEstates
+            var result = this.events
                 .GetAll(skip, take)
-                .ProjectTo<ListedRealEstateResponseModel>()
+                .ProjectTo<ListedEventsResponseModel>()
                 .ToList();
 
             return this.Ok(result);
@@ -58,15 +58,15 @@
         [ValidateModel]
         public IHttpActionResult Post(EventResponseModel model)
         {
-            var newRealEstate = Mapper.Map<Events>(model);
-            var id = this.realEstates.AddNew(newRealEstate, this.User.Identity.GetUserId());
+            var newEvent = Mapper.Map<Events>(model);
+            var id = this.events.AddNew(newEvent, this.User.Identity.GetUserId());
 
-            var result = this.realEstates
+            var result = this.events
                 .GetById(id)
-                .ProjectTo<ListedRealEstateResponseModel>()
+                .ProjectTo<ListedEventsResponseModel>()
                 .FirstOrDefault();
 
-            return this.Created($"/api/RealEstates/{id}", result);
+            return this.Created($"/api/Events/{id}", result);
         }
     }
 }

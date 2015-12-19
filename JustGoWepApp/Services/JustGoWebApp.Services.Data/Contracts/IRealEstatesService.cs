@@ -3,7 +3,7 @@
     using System.Linq;
     using JustGoWebApp.Data.Models;
 
-    public interface IRealEstatesService
+    public interface IEventsService
     {
         IQueryable<Events> GetAll(int skip, int take);
 

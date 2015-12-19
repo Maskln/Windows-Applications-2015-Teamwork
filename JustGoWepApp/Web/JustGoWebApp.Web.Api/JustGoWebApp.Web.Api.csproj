@@ -215,7 +215,7 @@
     <Compile Include="Config\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
-    <Compile Include="Controllers\RealEstatesController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

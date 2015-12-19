@@ -6,18 +6,18 @@
     using JustGoWebApp.Data.Models;
     using JustGoWebApp.Data.Repositories;
 
-    public class RealEstatesService : IRealEstatesService
+    public class EventsService : IEventsService
     {
-        private readonly IRepository<Events> realEstates;
+        private readonly IRepository<Events> Events;
 
-        public RealEstatesService(IRepository<Events> realEstates)
+        public EventsService(IRepository<Events> events)
         {
-            this.realEstates = realEstates;
+            this.Events = events;
         }
         
         public IQueryable<Events> GetAll(int skip, int take)
         {
-            return this.realEstates
+            return this.Events
                 .All()
                 .OrderByDescending(r => r.CreatedOn)
                 .Skip(skip)
@@ -26,20 +26,20 @@
 
         public IQueryable<Events> GetById(int id)
         {
-            return this.realEstates
+            return this.Events
                 .All()
                 .Where(r => r.Id == id);
         }
 
-        public int AddNew(Events newRealEstate, string userId)
+        public int AddNew(Events newEvent, string userId)
         {
-            newRealEstate.CreatedOn = DateTime.UtcNow;
-            newRealEstate.UserId = userId;
+            newEvent.CreatedOn = DateTime.UtcNow;
+            newEvent.UserId = userId;
 
-            this.realEstates.Add(newRealEstate);
-            this.realEstates.SaveChanges();
+            this.Events.Add(newEvent);
+            this.Events.SaveChanges();
 
-            return newRealEstate.Id;
+            return newEvent.Id;
         }
     }
 }
