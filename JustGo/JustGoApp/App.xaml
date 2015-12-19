@@ -13,6 +13,7 @@
                 <ResourceDictionary Source="Resources/StackPanelStyleResources.xaml" />
                 <ResourceDictionary Source="Resources/TextBoxStyleResources.xaml" />
                 <ResourceDictionary Source="Resources/TextBlockStyleResources.xaml" />
+                <ResourceDictionary Source="Resources/RichEditBoxStyleResources.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
