@@ -17,5 +17,7 @@
         public DateTime EventData { get; set; }
 
         public DateTime CreatedOn { get; set; }
+
+        public string Location { get; set; }
     }
 }

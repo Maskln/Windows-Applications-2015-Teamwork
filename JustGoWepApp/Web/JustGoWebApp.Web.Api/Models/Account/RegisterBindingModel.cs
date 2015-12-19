@@ -12,8 +12,8 @@
         public string Email { get; set; }
 
         [Required]
-        [Display(Name = "TelephonNumber")]
-        public string TelefonNumber { get; set; }
+        [Display(Name = "TelephoneNumber")]
+        public string TelephoneNumber { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]

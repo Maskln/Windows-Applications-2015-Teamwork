@@ -33,8 +33,8 @@
         [MaxLength(UserConstants.NameMaxLength)]
         public string LastName { get; set; }
 
-        [MinLength(UserConstants.TelephonMinLength)]
-        public string TelefonNumber { get; set; }
+        [MinLength(UserConstants.TelephoneMinLength)]
+        public string TelephoneNumber { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager, string authenticationType)
         {

@@ -13,6 +13,6 @@ namespace JustGoWebApp.Web.Api.Models.Users
 
         public string LastName { get; set; }
 
-        public string TelephonNumber { get; set; }
+        public string TelephoneNumber { get; set; }
     }
 }

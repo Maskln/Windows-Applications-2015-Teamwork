@@ -237,7 +237,7 @@
     <Compile Include="Models\Comments\CommentRequestModel.cs" />
     <Compile Include="Models\Comments\CommentResponseModel.cs" />
     <Compile Include="Models\Events\AuthenticatedRealEstateDetailsResponseModel.cs" />
-    <Compile Include="Models\Events\ListedRealEstateResponseModel.cs" />
+    <Compile Include="Models\Events\ListedEventsResponseModel.cs" />
     <Compile Include="Models\Events\RealEstateDetailsResponseModel.cs" />
     <Compile Include="Models\Events\EventRequestModel.cs" />
     <Compile Include="Models\Users\DataForUserResponseModel.cs" />

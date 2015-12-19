@@ -9,6 +9,6 @@
 
         IQueryable<Events> GetById(int id);
         
-        int AddNew(Events newRealEstate, string userId);
+        int AddNew(Events newEvent, string userId);
     }
 }
