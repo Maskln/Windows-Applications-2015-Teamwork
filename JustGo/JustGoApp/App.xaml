@@ -14,6 +14,7 @@
                 <ResourceDictionary Source="Resources/TextBoxStyleResources.xaml" />
                 <ResourceDictionary Source="Resources/TextBlockStyleResources.xaml" />
                 <ResourceDictionary Source="Resources/RichEditBoxStyleResources.xaml" />
+                <ResourceDictionary Source="Resources/ImageStyleResources.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

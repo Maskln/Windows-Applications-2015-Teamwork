@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="1.2*" />
@@ -21,33 +21,33 @@
                Grid.Column="0"
                Text="Edit Profile" 
                Style="{StaticResource titleTextBlockStyle}" />
-        <Grid Grid.Row="1" 
-              Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*" />
-                <RowDefinition Height="1*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="1" 
+                    Grid.Column="0"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
             <Image Grid.Row="0" 
                    Grid.Column="0"
                    Grid.RowSpan="2"
-                   Source="/Assets/image/JustGoLogo.png"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
-            <Button Grid.Row="0"
-                    Grid.Column="1"
+                   Name="profilePicture"
+                   Style="{StaticResource ProfileImageStyle}"/>
+            <Grid HorizontalAlignment="Center"
+                  VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0"
+                    Grid.Column="0"
                     Content="Capture By Camera"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center" />
-            <Button Grid.Row="1"
-                    Grid.Column="1"
+                    Click="OnCaptueByCamerButton"
+                    Style="{StaticResource CameraButtonStyle}"/>
+                <Button Grid.Row="1"
+                    Grid.Column="0"
                     Content="Choose By Gallery"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center" />
-        </Grid>
+                    Style="{StaticResource CameraButtonStyle}"/>
+            </Grid>
+        </StackPanel>
         <StackPanel Grid.Row="2" 
                 Grid.Column="0"
                 Style="{StaticResource ProfilePageStackPanelStyle}">

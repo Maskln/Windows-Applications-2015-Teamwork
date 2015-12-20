@@ -21,6 +21,13 @@
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="Template" Value="{StaticResource CircleButtonTemplate}" />
     </Style>
+    <Style x:Key="CameraButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="#07613e" />
+        <Setter Property ="Foreground" Value="AntiqueWhite" />
+        <Setter Property ="Width" Value="150" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
     <ControlTemplate x:Key="CircleButtonTemplate" TargetType="Button">
         <Grid>
             <Ellipse Width="{TemplateBinding Width}"
