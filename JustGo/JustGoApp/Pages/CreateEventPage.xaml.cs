@@ -1,15 +1,53 @@
 ﻿namespace JustGoApp.Pages
 {
+    using DataModel;
+    using DbContextSQLitee;
+    using Helpers;
+    using Newtonsoft.Json;
+    using System.Net.Http;
+    using System.Net.Http.Headers;
+    using System.Text;
+    using System.Threading.Tasks;
     using Windows.UI.Xaml.Controls;
 
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class CreateEventPage : Page
     {
+        private readonly HttpClient httpClient;
         public CreateEventPage()
         {
             this.InitializeComponent();
+            this.httpClient = new HttpClient();
+            DbContextSQL.InitAsync();
+        }
+
+        private async void OnAddEventButtonClick(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            string value = string.Empty;
+            descriptionEvent.Document.GetText(Windows.UI.Text.TextGetOptions.AdjustCrlf, out value);
+
+            var createEvent = new Event(titleEvent.Text, timeEvent.Text, addressEvent.Text, value, addressEvent.Text);
+
+            var url = "http://localhost:15334/api/Events";
+
+            var token = (await HelperMethods.GetToken());
+
+            this.httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            
+            var json = await Task.Factory.StartNew(() => JsonConvert.SerializeObject(createEvent));
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await this.httpClient.PostAsync(url, content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                HelperMethods.PopUpMessage("The Event is added", "Congrats", "Ok");
+                this.Frame.Navigate(typeof(SignedInPage));
+            }
+            else
+            {
+                HelperMethods.PopUpMessage("", "Sorry", "Try Again");
+            }
         }
     }
 }

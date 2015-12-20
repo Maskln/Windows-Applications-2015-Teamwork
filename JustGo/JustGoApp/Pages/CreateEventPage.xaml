@@ -73,6 +73,6 @@
         <Button Grid.Row="6"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
-                Content="Sign Up" />
+                Content="Add Event" />
     </Grid>
 </Page>
