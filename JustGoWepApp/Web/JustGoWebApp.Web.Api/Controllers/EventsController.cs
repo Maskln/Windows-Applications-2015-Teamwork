@@ -32,27 +32,7 @@
                 .ToList();
 
             return this.Ok(result);
-        }
-
-        //public IHttpActionResult Get(int id)
-        //{
-        //    var query = this.realEstates.GetById(id);
-        //    RealEstateDetailsResponseModel result;
-        //    if (this.User.Identity.IsAuthenticated)
-        //    {
-        //        result = query
-        //            .ProjectTo<AuthenticatedRealEstateDetailsResponseModel>()
-        //            .FirstOrDefault();
-        //    }
-        //    else
-        //    {
-        //        result = query
-        //            .ProjectTo<RealEstateDetailsResponseModel>()
-        //            .FirstOrDefault();
-        //    }
-
-        //    return this.Ok(result);
-        //}
+        }   
 
         [Authorize]
         [ValidateModel]

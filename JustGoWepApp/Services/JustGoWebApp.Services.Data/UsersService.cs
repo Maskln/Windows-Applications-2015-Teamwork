@@ -1,6 +1,5 @@
 ﻿namespace JustGoWebApp.Services.Data
-{
-    using System;
+{          
     using System.Linq;
     using Contracts;
     using JustGoWebApp.Data.Models;

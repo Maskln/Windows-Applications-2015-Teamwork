@@ -214,7 +214,6 @@
     <Compile Include="Config\Startup.Auth.cs" />
     <Compile Include="Config\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -234,11 +233,7 @@
     <Compile Include="Models\Account\RegisterExternalBindingModel.cs" />
     <Compile Include="Models\Account\RemoveLoginBindingModel.cs" />
     <Compile Include="Models\Account\UserInfoViewModel.cs" />
-    <Compile Include="Models\Comments\CommentRequestModel.cs" />
-    <Compile Include="Models\Comments\CommentResponseModel.cs" />
-    <Compile Include="Models\Events\AuthenticatedRealEstateDetailsResponseModel.cs" />
     <Compile Include="Models\Events\ListedEventsResponseModel.cs" />
-    <Compile Include="Models\Events\RealEstateDetailsResponseModel.cs" />
     <Compile Include="Models\Events\EventRequestModel.cs" />
     <Compile Include="Models\Users\DataForUserResponseModel.cs" />
     <Compile Include="Models\Users\UserResponseModel.cs" />

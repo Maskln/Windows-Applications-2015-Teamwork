@@ -1,17 +1,16 @@
 ﻿namespace JustGoWebApp.Data.Models
 {
-    using Common.Constants;
-    using Microsoft.AspNet.Identity;
-    using Microsoft.AspNet.Identity.EntityFramework;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.Security.Claims;
     using System.Threading.Tasks;
+    using Common.Constants;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework; 
 
     public class User : IdentityUser
     {
-        private ICollection<Events> eventsUser;
-        
+        private ICollection<Events> eventsUser;     
 
         public User()
         {
@@ -22,8 +21,7 @@
         {
             get { return this.eventsUser; }
             set { this.eventsUser = value; }
-        }
-
+        }                                            
         
         [MinLength(UserConstants.NameMinLength)]
         [MaxLength(UserConstants.NameMaxLength)]

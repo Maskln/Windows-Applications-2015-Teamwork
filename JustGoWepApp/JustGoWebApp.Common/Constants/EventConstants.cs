@@ -9,8 +9,6 @@
         public const int TitleMaxLength = 100;
 
         public const int DescriptionMinLength = 10;
-        public const int DescriptionMaxLength = 1000;
-
-        public const int MinConstructionYear = 1800;
+        public const int DescriptionMaxLength = 1000;  
     }
 }

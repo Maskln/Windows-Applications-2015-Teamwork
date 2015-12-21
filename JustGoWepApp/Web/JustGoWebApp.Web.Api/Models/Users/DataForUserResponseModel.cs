@@ -1,12 +1,8 @@
-﻿using JustGoWebApp.Data.Models;
-using JustGoWebApp.Web.Api.Infrastructure.Mappings;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace JustGoWebApp.Web.Api.Models.Users
+﻿namespace JustGoWebApp.Web.Api.Models.Users
 {
+    using JustGoWebApp.Data.Models;
+    using JustGoWebApp.Web.Api.Infrastructure.Mappings;     
+
     public class DataForUserResponseModel : UserResponseModel, IMapFrom<User>
     {
         public string FirstName { get; set; }
