@@ -140,6 +140,7 @@
     <Content Include="Assets\image\balloonIcon.jpg" />
     <Content Include="Assets\image\clockIcon.jpg" />
     <Content Include="Assets\image\JustGoLogo.png" />
+    <Content Include="Assets\image\JustGoLogo2.png" />
     <Content Include="Assets\image\locationIcon.jpg" />
     <Content Include="Assets\image\titleIcon.jpg" />
     <Content Include="Properties\Default.rd.xml" />
