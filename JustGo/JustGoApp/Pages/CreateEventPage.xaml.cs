@@ -49,5 +49,9 @@
                 HelperMethods.PopUpMessage("", "Sorry", "Try Again");
             }
         }
+        private void Image_DoubleTapped(object sender, Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MapPage));
+        }
     }
 }
