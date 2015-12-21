@@ -1,6 +1,6 @@
 ﻿namespace JustGoApp.DataModel
 {
-   public class Event
+    public class Event
     {
         public string Title { get; set; }
 

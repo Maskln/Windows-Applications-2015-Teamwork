@@ -98,7 +98,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DbContextSQL.cs" />
+    <Compile Include="DataModels\Event.cs" />
     <Compile Include="Helpers\DelegateCommand.cs" />
     <Compile Include="Helpers\HelperMethods.cs" />
     <Compile Include="Pages\CreateEventPage.xaml.cs">
@@ -125,10 +125,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DbContextSqlilee\DbContextSQL.cs" />
     <Compile Include="DbContextSqlilee\User.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="ViewModels\BaseViewModel.cs" />
-    <Compile Include="ViewModels\IContentViewModel.cs" />
-    <Compile Include="ViewModels\IPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -228,6 +224,7 @@
       <Name>SQLite for Universal App Platform</Name>
     </SDKReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
