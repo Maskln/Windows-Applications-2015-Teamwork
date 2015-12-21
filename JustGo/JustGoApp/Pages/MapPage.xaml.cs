@@ -8,6 +8,7 @@
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
     using Windows.UI.Xaml.Controls.Maps;
+
     public sealed partial class MapPage : Page
     {
         public MapPage()
@@ -42,7 +43,9 @@
             MapAddress address = null;
             var tappedGeoPosition = args.Location.Position;
             address = await this.GetAddres(tappedGeoPosition.Latitude, tappedGeoPosition.Longitude);
-            var m = address.FormattedAddress;
+            var finalAddress = address.FormattedAddress;
+
+            this.Frame.Navigate(typeof(Pages.CreateEventPage), finalAddress);
         }
 
         public async Task<MapAddress> GetAddres(double latitude, double longtitude)

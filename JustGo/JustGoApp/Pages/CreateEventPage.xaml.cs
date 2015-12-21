@@ -9,7 +9,7 @@
     using Helpers;
     using Newtonsoft.Json;
     using Windows.UI.Xaml.Controls;
-
+    using Windows.UI.Xaml.Navigation;
     public sealed partial class CreateEventPage : Page
     {
         private readonly HttpClient httpClient;
@@ -18,6 +18,10 @@
             this.InitializeComponent();
             this.httpClient = new HttpClient();
             DbContextSQL.InitAsync();
+            if (addressEvent.Text == null)
+            {
+                addressEvent.Text = "Please select location";
+            }
         }
 
         private async void OnAddEventButtonClick(object sender, Windows.UI.Xaml.RoutedEventArgs e)
@@ -48,6 +52,21 @@
             {
                 HelperMethods.PopUpMessage("", "Sorry", "Try Again");
             }
+        }
+
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            string location = e.Parameter as string;
+            if (location == null)
+            {
+                return;
+            }
+            else
+            {
+                addressEvent.Text = location;
+            }
+
         }
         private void Image_DoubleTapped(object sender, Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs e)
         {
