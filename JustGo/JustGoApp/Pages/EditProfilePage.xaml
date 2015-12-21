@@ -56,9 +56,8 @@
                    Foreground="Gray"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"/>
-            <TextBox Text="TODO: Getting default Value"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
+            <TextBox HorizontalAlignment="Center"
+                     VerticalAlignment="Center"/>
         </StackPanel>
         <StackPanel Grid.Row="3" 
                 Grid.Column="0"
@@ -68,9 +67,8 @@
                    Foreground="Gray"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"/>
-            <TextBox Text="TODO: Getting default Value"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
+            <TextBox HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
         </StackPanel>
         <StackPanel Grid.Row="4" 
                 Grid.Column="0"
@@ -80,9 +78,8 @@
                    Foreground="Gray"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"/>
-            <TextBox Text="TODO: Getting default Value"
-                  HorizontalAlignment="Center"
-                  VerticalAlignment="Center"/>
+            <TextBox HorizontalAlignment="Center"
+                     VerticalAlignment="Center"/>
         </StackPanel>
         <StackPanel Grid.Row="5" 
                 Grid.Column="0"
@@ -92,9 +89,8 @@
                    Foreground="Gray"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"/>
-            <TextBox Text="TODO: Getting default Value"
-                  HorizontalAlignment="Center"
-                  VerticalAlignment="Center"/>
+            <TextBox HorizontalAlignment="Center"
+                     VerticalAlignment="Center"/>
         </StackPanel>
         <Button Grid.Row="6"
                 Grid.Column="0"
