@@ -99,6 +99,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataModels\Event.cs" />
+    <Compile Include="DataModels\ProfileDataModel.cs" />
     <Compile Include="Helpers\DelegateCommand.cs" />
     <Compile Include="Helpers\HelperMethods.cs" />
     <Compile Include="Pages\CreateEventPage.xaml.cs">

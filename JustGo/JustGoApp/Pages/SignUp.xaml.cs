@@ -2,15 +2,11 @@
 {
     using System.Collections.Generic;
     using System.Net.Http;
+    using System.Text.RegularExpressions;
     using JustGoApp.Helpers;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
-    using System.Text.RegularExpressions;
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+
     public sealed partial class SignUp : Page
     {
         private readonly HttpClient httpClient;
@@ -68,8 +64,7 @@
 
             var url = "http://localhost:15334/api/Account/Register";
             var response = await httpClient.PostAsync(url, formContent);
-            var stringContent = await response.Content.ReadAsStringAsync();
-
+            var stringContent = await response.Content.ReadAsStringAsync();  
 
             //JObject obj = JObject.Parse(stringContent);
             //var name = obj["ModelState"];

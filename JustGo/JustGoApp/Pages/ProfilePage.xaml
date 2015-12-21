@@ -5,6 +5,8 @@
     xmlns:local="using:JustGoApp.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:JustGoApp.ViewModels"
+    xmlns:profile="using:JustGoApp.Pages"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -32,7 +34,7 @@
                    Foreground="Gray"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"/>
-            <TextBlock Text="Lyubomir"
+            <TextBlock Name="firstName"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"/>
         </StackPanel>
@@ -44,31 +46,31 @@
                    Foreground="Gray"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"/>
-            <TextBlock Text="Nanev"
+            <TextBlock Name="lastName"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"/>
         </StackPanel>
         <StackPanel Grid.Row="4" 
                 Grid.Column="0"
                 Style="{StaticResource ProfilePageStackPanelStyle}">
-            <TextBlock Text="E-mail:"
+            <TextBlock Text="Username:"
                    FontSize="10"
                    Foreground="Gray"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"/>
-            <TextBlock Text="Lyubomir.Nanev@gmail.com"
+            <TextBlock Name="username"
                   HorizontalAlignment="Center"
                   VerticalAlignment="Center"/>
         </StackPanel>
         <StackPanel Grid.Row="5" 
                 Grid.Column="0"
                 Style="{StaticResource ProfilePageStackPanelStyle}">
-            <TextBlock Text="Phone Number:"
+            <TextBlock  Text="Telephone Number:"
                    FontSize="10"
                    Foreground="Gray"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"/>
-            <TextBlock Text="+359885134556"
+            <TextBlock Name="telephoneNumber"
                   HorizontalAlignment="Center"
                   VerticalAlignment="Center"/>
         </StackPanel>

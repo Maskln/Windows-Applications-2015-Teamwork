@@ -57,5 +57,11 @@
 
             return result;
         }
+
+        public static async void DeleteAsync()
+        {
+            var connection = GetDbConnectionAsync();
+            await connection.DeleteAllAsync<User>();
+        }
     }
 }

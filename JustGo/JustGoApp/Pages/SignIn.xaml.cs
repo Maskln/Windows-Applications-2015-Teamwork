@@ -7,9 +7,8 @@
     using Windows.UI.Xaml.Controls;
     using System;
     using Helpers;
-    using JustGoApp.DbContextSQLitee;    /// <summary>
-                              /// An empty page that can be used on its own or navigated to within a Frame.
-                              /// </summary>
+    using JustGoApp.DbContextSQLitee;
+
     public sealed partial class SignIn : Page
     {
         private readonly HttpClient httpClient;
@@ -18,6 +17,7 @@
         {
             this.InitializeComponent();
             this.httpClient = new HttpClient();
+            DbContextSQL.DeleteAsync();
             DbContextSQL.InitAsync();
         }
 
@@ -25,14 +25,14 @@
         {
             var formContent = new FormUrlEncodedContent(new[] { new KeyValuePair<string, string>("Username", signInUsername.Text),
                                                                 new KeyValuePair<string, string>("Password", signInPassword.Password),
-                                                                new KeyValuePair<string, string>("grant_type", "password")});  
+                                                                new KeyValuePair<string, string>("grant_type", "password")});
 
             var response = await httpClient.PostAsync("http://localhost:15334/token", formContent);
 
             var stringContent = await response.Content.ReadAsStringAsync();
-            
 
-            JObject obj = JObject.Parse(stringContent);     
+
+            JObject obj = JObject.Parse(stringContent);
 
             if (response.IsSuccessStatusCode)
             {
@@ -42,24 +42,22 @@
                 string message = "You are Signed in!";
                 var title = "Bravo :)";
                 var buuttonMessage = "Ok";
-
-               await DbContextSQL.InsertUserAsync(new User()
+                await DbContextSQL.InsertUserAsync(new User()
                 {
                     UserName = signInUsername.Text,
                     Token = token,
-
                 });
 
                 HelperMethods.PopUpMessage(message, title, buuttonMessage);
-                this.Frame.Navigate(typeof(Pages.SignedInPage));  
+                this.Frame.Navigate(typeof(Pages.SignedInPage));
             }
             else
-            {        
+            {
                 string message = (string)obj["error_description"];
                 var title = "Sorry";
                 var buuttonMessage = "Try Again";
-                HelperMethods.PopUpMessage(message, title, buuttonMessage); 
-            } 
-        }   
+                HelperMethods.PopUpMessage(message, title, buuttonMessage);
+            }
+        }
     }
 }

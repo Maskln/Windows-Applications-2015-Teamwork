@@ -1,13 +1,13 @@
 ﻿namespace JustGoApp.Pages
 {
-    using DataModel;
-    using DbContextSQLitee;
-    using Helpers;
-    using Newtonsoft.Json;
     using System.Net.Http;
     using System.Net.Http.Headers;
     using System.Text;
     using System.Threading.Tasks;
+    using DataModel;
+    using DbContextSQLitee;
+    using Helpers;
+    using Newtonsoft.Json;
     using Windows.UI.Xaml.Controls;
 
     public sealed partial class CreateEventPage : Page
@@ -32,7 +32,7 @@
             var token = (await HelperMethods.GetToken());
 
             this.httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-            
+
             var json = await Task.Factory.StartNew(() => JsonConvert.SerializeObject(createEvent));
 
             var content = new StringContent(json, Encoding.UTF8, "application/json");
